@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_ticket_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn7-7A-eRN">
+                                <rect key="frame" x="124" y="352.5" width="127" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="表示するぞ"/>
+                                <connections>
+                                    <segue destination="lqJ-3h-Bue" kind="showDetail" identifier="view_ticket" id="qWf-hm-3g7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="シカゴ鉄道アプリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXd-nu-S6K">
+                                <rect key="frame" x="46.5" y="162.5" width="282.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uXd-nu-S6K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gef-se-DqL"/>
+                            <constraint firstItem="Gn7-7A-eRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OhI-gt-Sjc"/>
+                            <constraint firstItem="Gn7-7A-eRN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="mVN-pw-MPN"/>
+                            <constraint firstItem="uXd-nu-S6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="mzh-wQ-yoT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Ticket View Controller-->
+        <scene sceneID="74W-4c-0AO">
+            <objects>
+                <viewController id="lqJ-3h-Bue" customClass="TicketViewController" customModule="swift_ticket_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEv-rX-5n5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四ツ谷" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYA-y4-jtx" userLabel="from">
+                                <rect key="frame" x="-58" y="223.5" width="151" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="網走" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elF-kV-KyE" userLabel="to">
+                                <rect key="frame" x="307" y="223.5" width="101" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; -  &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-ec-3Wu">
+                                <rect key="frame" x="130" y="223.5" width="115" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.4.30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-F2-ehz" userLabel="Expiration">
+                                <rect key="frame" x="65" y="321.5" width="245" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ダルビッシュ　ユウ　様" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1P-tY-8db" userLabel="name">
+                                <rect key="frame" x="92" y="443" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通勤1箇月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMz-aI-Slv">
+                                <rect key="frame" x="-101" y="193" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1599円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-gN-uig">
+                                <rect key="frame" x="-90.5" y="473" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-SC-xQa">
+                                <rect key="frame" x="-108" y="158.5" width="31" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="b9B-zg-ZhH" kind="unwind" unwindAction="backToTopWithSegue:" id="5JR-BB-eJX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="l1P-tY-8db" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="120" id="1re-UW-wJE"/>
+                            <constraint firstItem="6wa-SC-xQa" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" constant="-280" id="JV2-SM-PjK"/>
+                            <constraint firstItem="ejA-ec-3Wu" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="-80" id="JXb-so-G2t"/>
+                            <constraint firstItem="hTx-gN-uig" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="150" id="NPE-uW-YDu"/>
+                            <constraint firstItem="MYA-y4-jtx" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" constant="-170" id="PEq-Gc-ftC"/>
+                            <constraint firstItem="ejA-ec-3Wu" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" id="RZw-lQ-Y9w"/>
+                            <constraint firstItem="elF-kV-KyE" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="-80" id="TeH-3I-scW"/>
+                            <constraint firstItem="MYA-y4-jtx" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="-80" id="VLK-DN-h2j"/>
+                            <constraint firstItem="0K2-F2-ehz" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" id="cF8-Uh-ZHs"/>
+                            <constraint firstItem="l1P-tY-8db" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" id="hGS-VR-5HC"/>
+                            <constraint firstItem="0K2-F2-ehz" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="30" id="jPy-sg-yF5"/>
+                            <constraint firstItem="DMz-aI-Slv" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" constant="-250" id="mzp-aN-Q3n"/>
+                            <constraint firstItem="6wa-SC-xQa" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="-160" id="obw-pW-iR7"/>
+                            <constraint firstItem="hTx-gN-uig" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" constant="-250" id="uCN-3a-KgC"/>
+                            <constraint firstItem="DMz-aI-Slv" firstAttribute="centerY" secondItem="FEv-rX-5n5" secondAttribute="centerY" constant="-130" id="xeg-PG-Fe8"/>
+                            <constraint firstItem="elF-kV-KyE" firstAttribute="centerX" secondItem="FEv-rX-5n5" secondAttribute="centerX" constant="170" id="z7k-5p-mc5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fJh-Ce-czC"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="59X-2L-8Is" appends="YES" id="9V9-98-7vs"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWq-pf-p08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b9B-zg-ZhH" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="59X-2L-8Is">
+                    <connections>
+                        <segue destination="b9B-zg-ZhH" kind="unwind" unwindAction="backToTopWithSegue:" id="0bU-37-Dbh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="971" y="698"/>
+        </scene>
+    </scenes>
+</document>
